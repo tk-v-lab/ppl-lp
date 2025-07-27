@@ -130,6 +130,42 @@
         .achievement-item li {
             margin-bottom: 5px;
         }
+        #examples {
+            padding: 40px 0;
+            text-align: center;
+        }
+        #examples h2 {
+            font-size: 2.5em;
+            color: #ff69b4;
+            margin-bottom: 40px;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .video-item {
+            background-color: #fff;
+            border: 1px solid #ffc0cb;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            transition: transform 0.3s;
+        }
+        .video-item:hover {
+            transform: translateY(-10px);
+        }
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .video-item h3 {
+            font-size: 1.5em;
+            color: #ff69b4;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
         footer {
             background-color: #ff69b4;
             color: #fff;
@@ -197,7 +233,24 @@
                 </div>
             </div>
         </section>
-    </div>
+
+        <section id="examples">
+            <h2>作例一覧</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Fascinating Casino Island</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
+                </div>
+                <div class="video-item">
+                    <h3>Nightmare Toy Party</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
+                </div>
+                <div class="video-item">
+                    <h3>The Road to Heaven</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <p>&copy; 2025 PowPadsLab. All Rights Reserved.</p>
