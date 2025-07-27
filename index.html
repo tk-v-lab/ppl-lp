@@ -35,11 +35,21 @@
             margin: 0;
             text-shadow: 4px 4px 0px #fff, 6px 6px 0px rgba(0,0,0,0.2); /* 縁取りと影 */
         }
+        header .furigana {
+            font-size: 2.0em; /* 適切なサイズに調整 */
+            color: #ff69b4;
+            margin-top: 5px;
+            font-family: 'Keifont', sans-serif; /* キャッチフレーズと同じフォント */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 影 */
+            text-align: center; /* 中央揃え */
+        }
         header .catchphrase {
             font-size: 1.5em;
-            color: #ff69b4;
-            margin-top: 10px;
-            font-family: 'Keifont', sans-serif; /* フォント変更 */
+            background-image: linear-gradient(to right, #ff69b4, #ffa500); /* ピンクからオレンジへのグラデーション */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 30px;
+            font-family: 'Keifont', sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 影 */
             animation: fadeInSlideUp 1.5s ease-out forwards; /* アニメーション */
         }
@@ -105,7 +115,8 @@
     <header>
         <img src="./素材/PPL rogo.png" alt="PowPadsLab Logo" style="max-width: 200px; margin-bottom: 20px;">
         <h1>PowPadsLab</h1>
-        <p class="catchphrase">カワイイが最強！ 未来の空間をデザインする つよつよクリエイター集団</p>
+        <p class="furigana">パウパッズラボ</p>
+        <p class="catchphrase">カワイイが最強！<br>未来の空間をデザインする つよつよクリエイター集団</p>
     </header>
 
     <div class="container">
@@ -129,8 +140,8 @@
                     <h3>mayuche</h3>
                 </div>
                 <div class="member-card">
-                    <img src="./素材/プロフィール画像/ToriKami.png" alt="ToriKami">
-                    <h3>ToriKami</h3>
+                    <img src="./素材/プロフィール画像/ToriKami.png" alt="とりかみ">
+                    <h3>とりかみ</h3>
                 </div>
                 <div class="member-card">
                     <img src="./素材/プロフィール画像/如月工房.png" alt="如月工房">
