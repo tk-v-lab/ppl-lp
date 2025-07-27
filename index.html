@@ -48,7 +48,7 @@
             background-image: linear-gradient(to right, #ff69b4, #ffa500); /* ピンクからオレンジへのグラデーション */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-top: 30px;
+            margin-top: 40px; /* 30pxから40pxに変更してさらに位置を調整 */
             font-family: 'Keifont', sans-serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 影 */
             animation: fadeInSlideUp 1.5s ease-out forwards; /* アニメーション */
@@ -101,6 +101,35 @@
             margin-top: 15px;
             margin-bottom: 10px;
         }
+        #achievements {
+            padding: 40px 0;
+            text-align: center;
+        }
+        #achievements h2 {
+            font-size: 2.5em;
+            color: #ff69b4;
+            margin-bottom: 40px;
+        }
+        .achievement-item {
+            background-color: #fff;
+            border: 1px solid #ffc0cb;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .achievement-item h3 {
+            color: #ff69b4;
+            margin-bottom: 10px;
+        }
+        .achievement-item ul {
+            list-style: none;
+            padding: 0;
+        }
+        .achievement-item li {
+            margin-bottom: 5px;
+        }
         footer {
             background-color: #ff69b4;
             color: #fff;
@@ -150,6 +179,21 @@
                 <div class="member-card">
                     <img src="./素材/プロフィール画像/タラ.png" alt="タラ">
                     <h3>タラ</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>受賞実績</h2>
+            <div class="achievement-list">
+                <div class="achievement-item">
+                    <h3>The SANDBOX GameJam</h3>
+                    <p></p>
+                    <ul>
+                        <li><strong>Tokyo City Builder - Meiji Shrine Twilight:</strong> 上位9チーム入賞</li>
+                        <li><strong>Game Jam Japan - The Road to Heaven:</strong> 第1位</li>
+                        <li><strong>Playboy Game Jam - Fascinating Casino Island:</strong> 第4位</li>
+                    </ul>
                 </div>
             </div>
         </section>
