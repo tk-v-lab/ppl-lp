@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowPadsLab - クリエイターチーム</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        @font-face {
+            font-family: 'Keifont';
+            src: url('./素材/k-font/keifont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #ffebf0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffc0cb;
+        }
+        header h1 {
+            font-size: 6em; /* 2倍に拡大 */
+            color: #ff69b4;
+            margin: 0;
+            text-shadow: 4px 4px 0px #fff, 6px 6px 0px rgba(0,0,0,0.2); /* 縁取りと影 */
+        }
+        header .catchphrase {
+            font-size: 1.5em;
+            color: #ff69b4;
+            margin-top: 10px;
+            font-family: 'Keifont', sans-serif; /* フォント変更 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 影 */
+            animation: fadeInSlideUp 1.5s ease-out forwards; /* アニメーション */
+        }
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #members {
+            padding: 40px 0;
+            text-align: center;
+        }
+        #members h2 {
+            font-size: 2.5em;
+            color: #ff69b4;
+            margin-bottom: 40px;
+        }
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .member-card {
+            background-color: #fff;
+            border: 1px solid #ffc0cb;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            transition: transform 0.3s;
+        }
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+        .member-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #ffc0cb;
+            object-fit: cover;
+        }
+        .member-card h3 {
+            font-size: 1.5em;
+            color: #ff69b4;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #ff69b4;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="./素材/PPL rogo.png" alt="PowPadsLab Logo" style="max-width: 200px; margin-bottom: 20px;">
+        <h1>PowPadsLab</h1>
+        <p class="catchphrase">カワイイが最強！ 未来の空間をデザインする つよつよクリエイター集団</p>
+    </header>
+
+    <div class="container">
+        <section id="members">
+            <h2>Members</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="Yuya">
+                    <h3>Yuya</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="SUZUHIRO">
+                    <h3>SUZUHIRO</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="Peccolona">
+                    <h3>Peccolona</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="mayuche">
+                    <h3>mayuche</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="ToriKami">
+                    <h3>ToriKami</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="如月工房">
+                    <h3>如月工房</h3>
+                </div>
+                <div class="member-card">
+                    <img src="https://via.placeholder.com/150" alt="タラ">
+                    <h3>タラ</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 PowPadsLab. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
