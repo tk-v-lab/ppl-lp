@@ -81,23 +81,23 @@
             <div class="video-grid">
                 <div class="video-item">
                     <h3>Fascinating Casino Island</h3>
-                    <video controls loop muted src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
+                    <video controls loop muted playsinline preload="metadata" src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>Nightmare Toy Party</h3>
-                    <video controls loop muted src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
+                    <video controls loop muted playsinline preload="metadata" src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>The Road to Heaven</h3>
-                    <video controls loop muted src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
+                    <video controls loop muted playsinline preload="metadata" src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>TemporalRecovery</h3>
-                    <video controls loop muted src="./素材/PV動画/TemporalRecovery.mp4"></video>
+                    <video controls loop muted playsinline preload="metadata" src="./素材/PV動画/TemporalRecovery.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>Mystery of the Dark Mansion</h3>
-                    <video controls loop muted src="./素材/PV動画/Mystery of the Dark Mansion.mp4"></video>
+                    <video controls loop muted playsinline preload="metadata" src="./素材/PV動画/Mystery of the Dark Mansion.mp4"></video>
                 </div>
             </div>
         </section>
@@ -107,25 +107,37 @@
 
     <script>
         const videos = document.querySelectorAll('.video-item video');
+        let currentlyPlaying = null;
+
+        const playVideo = (video) => {
+            if (currentlyPlaying && currentlyPlaying !== video) {
+                currentlyPlaying.pause();
+            }
+            video.play();
+            currentlyPlaying = video;
+        };
+
+        const pauseVideo = (video) => {
+            video.pause();
+            if (currentlyPlaying === video) {
+                currentlyPlaying = null;
+            }
+        };
 
         // PC: mouseoverで再生、mouseoutで停止
         if (window.matchMedia('(hover: hover)').matches) {
             videos.forEach(video => {
-                video.parentElement.addEventListener('mouseover', () => {
-                    video.play();
-                });
-                video.parentElement.addEventListener('mouseout', () => {
-                    video.pause();
-                });
+                video.parentElement.addEventListener('mouseover', () => playVideo(video));
+                video.parentElement.addEventListener('mouseout', () => pauseVideo(video));
             });
         } else {
             // スマホ: 画面中央で再生
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.play();
+                        playVideo(entry.target);
                     } else {
-                        entry.target.pause();
+                        pauseVideo(entry.target);
                     }
                 });
             }, { threshold: 0.5 });
