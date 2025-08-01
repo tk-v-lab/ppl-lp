@@ -81,29 +81,60 @@
             <div class="video-grid">
                 <div class="video-item">
                     <h3>Fascinating Casino Island</h3>
-                    <video controls autoplay loop muted src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
+                    <video controls loop muted src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>Nightmare Toy Party</h3>
-                    <video controls autoplay loop muted src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
+                    <video controls loop muted src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>The Road to Heaven</h3>
-                    <video controls autoplay loop muted src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
+                    <video controls loop muted src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>TemporalRecovery</h3>
-                    <video controls autoplay loop muted src="./素材/PV動画/TemporalRecovery.mp4"></video>
+                    <video controls loop muted src="./素材/PV動画/TemporalRecovery.mp4"></video>
                 </div>
                 <div class="video-item">
                     <h3>Mystery of the Dark Mansion</h3>
-                    <video controls autoplay loop muted src="./素材/PV動画/Mystery of the Dark Mansion.mp4"></video>
+                    <video controls loop muted src="./素材/PV動画/Mystery of the Dark Mansion.mp4"></video>
                 </div>
             </div>
         </section>
 
         <a href="index.html" class="back-button">戻る</a>
     </div>
+
+    <script>
+        const videos = document.querySelectorAll('.video-item video');
+
+        // PC: mouseoverで再生、mouseoutで停止
+        if (window.matchMedia('(hover: hover)').matches) {
+            videos.forEach(video => {
+                video.parentElement.addEventListener('mouseover', () => {
+                    video.play();
+                });
+                video.parentElement.addEventListener('mouseout', () => {
+                    video.pause();
+                });
+            });
+        } else {
+            // スマホ: 画面中央で再生
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play();
+                    } else {
+                        entry.target.pause();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            videos.forEach(video => {
+                observer.observe(video);
+            });
+        }
+    </script>
 
 </body>
 </html>
