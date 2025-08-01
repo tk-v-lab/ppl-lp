@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品一覧 - PowPads Lab.</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #ffebf0;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffc0cb;
+        }
+        header h1 {
+            font-size: 4em;
+            color: #ff69b4;
+            margin: 0;
+        }
+        #works {
+            padding: 40px 0;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .video-item {
+            background-color: #fff;
+            border: 1px solid #ffc0cb;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            transition: transform 0.3s;
+        }
+        .video-item:hover {
+            transform: translateY(-10px);
+        }
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .video-item h3 {
+            font-size: 1.5em;
+            color: #ff69b4;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 40px auto 0;
+            padding: 15px 20px;
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>作品一覧</h1>
+    </header>
+
+    <div class="container">
+        <section id="works">
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Fascinating Casino Island</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/Fascinating Casino Island.mp4"></video>
+                </div>
+                <div class="video-item">
+                    <h3>Nightmare Toy Party</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/Nightmare Toy Party.mp4"></video>
+                </div>
+                <div class="video-item">
+                    <h3>The Road to Heaven</h3>
+                    <video controls autoplay loop muted src="./素材/PV動画/TheRoadtoHeaven_s.mp4"></video>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-button">戻る</a>
+    </div>
+
+</body>
+</html>
